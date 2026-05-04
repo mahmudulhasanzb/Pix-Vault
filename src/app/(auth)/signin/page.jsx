@@ -11,6 +11,7 @@ import {
   Label,
   TextField,
 } from '@heroui/react' ;
+import { FaGoogle } from 'react-icons/fa6';
 import { toast } from 'react-toastify';
 
 
@@ -35,6 +36,13 @@ export default function SignInPage() {
       toast.success("Signed in successfully");
     }
   };
+
+  // Google signin
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+  provider: "google"
+})
+  }
 
   return (
     <Card className="border mx-auto w-125 py-10 mt-5">
@@ -92,6 +100,13 @@ export default function SignInPage() {
           </Button>
         </div>
       </Form>
+      <p className="text-center">OR</p>
+      <Button
+      onClick={handleGoogleSignIn}
+        className="w-full hover:border-purple-500 hover:text-purple-500" variant='outline' >
+        <FaGoogle/>
+        Login with Google
+      </Button>
     </Card>
   );
 }
