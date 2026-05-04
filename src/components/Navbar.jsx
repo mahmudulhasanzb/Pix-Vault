@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="flex gap-2 items-center">
           <Image
             src={'/logo.png'}
-            alt="logo"
+            alt="PixVault logo"
             loading="eager"
             width={30}
             height={30}
