@@ -2,10 +2,12 @@ import { Button, Card, Chip, Separator } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
+import { BiDownload } from 'react-icons/bi';
+import { FaHeart } from 'react-icons/fa6';
 
 const PhotoCard = ({photo}) => {
   return (
-    <Card className="border rounded-xl">
+    <Card className="border-none p-4">
       <div className="relative w-full aspect-square">
         <Image
           src={photo.imageUrl}
@@ -25,14 +27,14 @@ const PhotoCard = ({photo}) => {
       </div>
       <div className="flex gap-5">
         <div className="flex items-center gap-2">
-          <p>FaHeart</p>
+          <p><FaHeart/></p>
           <p>{photo.likes}</p>
         </div>
 
         <Separator orientation="vertical" />
 
         <div className="flex items-center gap-2">
-          <p>BiDownload</p>
+          <p><BiDownload/></p>
           <p>{photo.downloads}</p>
         </div>
       </div>
