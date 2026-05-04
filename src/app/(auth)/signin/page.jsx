@@ -10,52 +10,37 @@ import {
   Input,
   Label,
   TextField,
-} from '@heroui/react';
-import { useRouter } from 'next/router';
+} from '@heroui/react' ;
 import { toast } from 'react-toastify';
 
-export default function SignUpPage() {
-  const router = useRouter();
+
+export default function SignInPage() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
     // BetterAuth
-    const { data, error} = await authClient.signUp.email({
-      name,
+    const { data, error } = await authClient.signIn.email({
       email,
       password,
+      callbackURL: "/"
     });
-
+    
     if (error) {
-      toast.error("failed to sign Up")
+      
+      toast.error( "Failed to sign in");
+    } else {
+      toast.success("Signed in successfully");
     }
-    if (data) {
-      toast.success("Acount created succesfully")
-      router.push("/")
-    }
-
   };
 
   return (
     <Card className="border mx-auto w-125 py-10 mt-5">
-      <h1 className="text-center text-2xl font-bold">Sign Up</h1>
+      <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
-        <TextField isRequired name="name" type="text">
-          <Label>Name</Label>
-          <Input placeholder="Enter your name" />
-          <FieldError />
-        </TextField>
-
-        <TextField isRequired name="image" type="text">
-          <Label>Image URL</Label>
-          <Input placeholder="Image URL" />
-          <FieldError />
-        </TextField>
 
         <TextField
           isRequired
@@ -83,20 +68,13 @@ export default function SignUpPage() {
             if (value.length < 8) {
               return 'Password must be at least 8 characters';
             }
-            if (!/[A-Z]/.test(value)) {
-              return 'Password must contain at least one uppercase letter';
-            }
-            if (!/[0-9]/.test(value)) {
-              return 'Password must contain at least one number';
-            }
-
             return null;
           }}
         >
           <Label>Password</Label>
           <Input placeholder="Enter your password" />
           <Description>
-            Must be at least 8 characters with 1 uppercase and 1 number
+            Enter your account password
           </Description>
           <FieldError />
         </TextField>
