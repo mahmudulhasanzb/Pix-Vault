@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📸 Pix-Vault
 
-## Getting Started
+**Pix-Vault** is a premium **AI Prompt Hub** designed for creators and AI enthusiasts. Built with **Next.js 16**, **React 19**, and **Tailwind CSS 4**, it serves as a high-performance library where users can discover stunning AI-generated imagery and the exact prompts used to create them.
 
-First, run the development server:
+![Pix-Vault Hero](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+- **💡 Prompt Inspiration**: Browse a curated collection of AI-generated images to find ideas for your next creation.
+- **📋 Copy & Paste Ready**: Easily view and copy high-performing prompts to use in your favorite AI generators like Midjourney, DALL-E, or Stable Diffusion.
+- **🚀 Next-Gen Performance**: Leveraging React 19 and Next.js 16 for an ultra-smooth browsing experience.
+- **🔐 User Vaults**: Secure authentication via **Better-Auth** allowing users to save and manage their favorite prompts.
+- **🎨 Modern UI/UX**: A premium interface built with **HeroUI** and **Tailwind CSS 4** for maximum aesthetic appeal.
+- **🔍 Deep Insights**: Explore the details behind each generation, including the creative prompts that powered the magic.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+| :--- | :--- |
+| **Framework** | [Next.js 16](https://nextjs.org/) (App Router) |
+| **Library** | [React 19](https://react.dev/) |
+| **Styling** | [Tailwind CSS 4](https://tailwindcss.com/), [HeroUI](https://heroui.com/) |
+| **Auth** | [Better-Auth](https://better-auth.com/) |
+| **Database** | [MongoDB](https://www.mongodb.com/) |
+| **Icons** | React Icons, Gravity UI Icons |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or higher
+- MongoDB instance (local or Atlas)
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/mahmudulhasanzb/Pix-Vault.git
+   cd Pix-Vault
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables:**
+   Create a `.env` file in the root directory and add the following:
+   ```env
+   MONGODB_URI=your_mongodb_uri
+   BETTER_AUTH_SECRET=your_auth_secret
+   BETTER_AUTH_URL=http://localhost:3000
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open the application:**
+   Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 📂 Project Structure
+
+```text
+pix-vault/
+├── src/
+│   ├── app/            # Next.js App Router (Routes & Layouts)
+│   ├── components/     # Reusable UI Components
+│   ├── lib/            # Shared utilities (Auth, DB Config)
+│   └── proxy.js        # Server proxy configurations
+├── public/             # Static assets
+└── ...configs          # Tailwind, ESLint, Next.js configs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🤝 Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## Learn More
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git checkout origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📜 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Distributed under the MIT License. See `LICENSE` for more information.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<p align="center">
+  Built with ❤️ by <a href="https://github.com/mahmudulhasanzb">mahmudulhasanzb</a>
+</p>
