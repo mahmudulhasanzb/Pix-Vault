@@ -2,7 +2,7 @@
 
 **Pix-Vault** is a premium **AI Prompt Hub** designed for creators and AI enthusiasts. Built with **Next.js 16**, **React 19**, and **Tailwind CSS 4**, it serves as a high-performance library where users can discover stunning AI-generated imagery and the exact prompts used to create them.
 
-![Pix-Vault Hero](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop)
+![Pix-Vault Hero](https://i.ibb.co.com/XZR3p95t/screencapture-pix-vault-ai-vercel-app-2026-05-07-17-23-29.png)
 
 ---
 
